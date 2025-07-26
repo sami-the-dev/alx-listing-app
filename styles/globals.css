@@ -1,3 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
+
+
+
+body {
+   font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@layer utilities {
+  /* Add custom scrollbar hiding utility */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@layer components {
+  li > a:hover {
+    color: var(--color-primary);
+  }
+}
+
+@theme {
+  --color-primary: #34967c;
+  --color-secondary: #161117;
+  --color-secondary_2: #ffa800;
+  --color-shimmer: #e9e9e9;
+  --color-shimmer_2: #ececec;
+  --color-gray: #f6f6f6;
+  --color-gray_2: #cacaca;
+  --color-white_17: #ffffff17;
+  --color-gray_3: #F9F9F9;
+}
